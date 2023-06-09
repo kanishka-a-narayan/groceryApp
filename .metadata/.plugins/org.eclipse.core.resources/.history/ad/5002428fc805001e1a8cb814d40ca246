@@ -1,0 +1,5 @@
+package com.groceryApp.registerLogin.service;
+
+public interface CustomerService {
+
+}

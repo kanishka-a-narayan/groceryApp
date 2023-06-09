@@ -1,0 +1,37 @@
+package com.groceryApp.registerLogin.service.Impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.groceryApp.registerLogin.DTO.customerDTO;
+import com.groceryApp.registerLogin.model.Customer;
+import com.groceryApp.registerLogin.repository.CustomerRepo;
+import com.groceryApp.registerLogin.service.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService{
+	@Autowired
+	private CustomerRepo customerRepo;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Override
+	public String addCustomer(customerDTO customerDTO) {
+		Customer customer=new Customer(
+				customerDTO.getId(),
+				customerDTO.getFirstName(),
+				customerDTO.getLastName(),
+				customerDTO.getEmail(),
+				customerDTO.getAdddress(),
+				this.passwordEncoder.encode(customerDTO.getPassword())
+				);
+				
+				
+		customerRepo.save(customer);
+		return customer.getFirstName();
+	}
+
+	
+		
+	}
+
+}

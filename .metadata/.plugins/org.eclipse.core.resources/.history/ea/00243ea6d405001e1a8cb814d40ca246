@@ -1,0 +1,5 @@
+package com.groceryApp.registerLogin.repository;
+
+public interface CustomerRepo {
+
+}

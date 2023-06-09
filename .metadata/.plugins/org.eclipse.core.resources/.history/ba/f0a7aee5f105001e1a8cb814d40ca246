@@ -1,0 +1,10 @@
+package com.groceryApp.registerLogin.service;
+
+import com.groceryApp.registerLogin.DTO.customerDTO;
+
+public interface CustomerService {
+
+	String addCustomer(customerDTO customerDTO);
+	
+
+}

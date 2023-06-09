@@ -1,0 +1,5 @@
+package com.groceryApp.registerLogin.response;
+
+public class LoginResponse {
+
+}

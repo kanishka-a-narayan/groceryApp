@@ -1,0 +1,5 @@
+package com.groceryApp.registerLogin.DTO;
+
+public class customerDTO {
+
+}

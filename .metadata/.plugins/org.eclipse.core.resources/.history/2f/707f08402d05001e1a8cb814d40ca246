@@ -1,0 +1,11 @@
+package com.groceryApp.registerLogin.model;
+
+public class customer {
+	private Long id;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+	
+
+}
